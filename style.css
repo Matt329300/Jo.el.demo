@@ -865,3 +865,5 @@ h3 { font-weight: 600; font-size: 1.3rem; }
 /* Kolejność: link do Google, pod nim ocena */
 .reviews-more { margin-top: 28px; }
 .reviews-more + .reviews-score { margin-top: 24px; padding-top: 24px; }
+/* Ocena tuż pod linkiem, bez linii */
+.reviews-more + .reviews-score { border-top: 0; margin-top: 6px; padding-top: 0; }
