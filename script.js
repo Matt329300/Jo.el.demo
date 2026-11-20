@@ -3,10 +3,6 @@
 (function () {
   "use strict";
 
-  // TODO: podać adres, pod który ma trafiać formularz grup (np. https://formspree.io/f/XXXX).
-  // Dopóki jest pusty, formularz nic nie wysyła i prosi o kontakt telefoniczny.
-  var FORM_ENDPOINT = "";
-
   // --- Menu mobilne ---
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
@@ -35,59 +31,6 @@
   // --- Rok w stopce ---
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
-
-  // --- Formularz większych grup ---
-  var form = document.getElementById("group-form");
-  var status = document.getElementById("form-status");
-  if (!form) return;
-
-  // Nie pozwalaj wybrać daty z przeszłości
-  var dateInput = document.getElementById("g-date");
-  if (dateInput) {
-    var t = new Date();
-    t.setMinutes(t.getMinutes() - t.getTimezoneOffset());
-    dateInput.min = t.toISOString().slice(0, 10);
-  }
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    var firstInvalid = null;
-    Array.prototype.forEach.call(form.elements, function (el) {
-      if (!el.name) return;
-      var field = el.closest(".field");
-      var ok = el.checkValidity();
-      if (field) field.classList.toggle("is-invalid", !ok);
-      el.setAttribute("aria-invalid", ok ? "false" : "true");
-      if (!ok && !firstInvalid) firstInvalid = el;
-    });
-
-    if (firstInvalid) {
-      status.textContent = "Uzupełnij zaznaczone pola.";
-      firstInvalid.focus();
-      return;
-    }
-
-    if (!FORM_ENDPOINT) {
-      status.textContent = "Formularz nie jest jeszcze podłączony. Zadzwoń: 533 765 552.";
-      return;
-    }
-
-    status.textContent = "Wysyłanie…";
-    fetch(FORM_ENDPOINT, {
-      method: "POST",
-      headers: { Accept: "application/json" },
-      body: new FormData(form)
-    })
-      .then(function (res) {
-        if (!res.ok) throw new Error(res.status);
-        form.reset();
-        status.textContent = "Dziękujemy! Odezwiemy się w sprawie zapytania.";
-      })
-      .catch(function () {
-        status.textContent = "Nie udało się wysłać. Zadzwoń: 533 765 552.";
-      });
-  });
 })();
 
 // --- Zakładki menu (Jedzenie / Napoje) ---
@@ -121,4 +64,65 @@
       if (next) { e.preventDefault(); select(next, true); }
     });
   });
+})();
+
+// --- Karuzela opinii (zmienia się sama co kilka sekund) ---
+// Zatrzymuje się po najechaniu, przy fokusie i gdy karta jest w tle.
+// Przy "ograniczonym ruchu" nie przewija się sama.
+(function () {
+  "use strict";
+  var track = document.getElementById("reviews-track");
+  if (!track) return;
+  var slides = Array.prototype.slice.call(track.querySelectorAll(".review"));
+  var dotsBox = document.getElementById("reviews-dots");
+  var prev = document.getElementById("reviews-prev");
+  var next = document.getElementById("reviews-next");
+  var section = track.closest(".reviews");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var DELAY = 6000;
+  var index = 0, timer = null, paused = false;
+
+  var dots = slides.map(function (_, i) {
+    var d = document.createElement("button");
+    d.type = "button";
+    d.className = "reviews-dot";
+    d.setAttribute("role", "tab");
+    d.setAttribute("aria-label", "Opinia " + (i + 1));
+    d.addEventListener("click", function () { go(i); restart(); });
+    dotsBox.appendChild(d);
+    return d;
+  });
+
+  function go(i) {
+    index = (i + slides.length) % slides.length;
+    slides.forEach(function (s, n) {
+      var on = n === index;
+      s.classList.toggle("is-active", on);
+      s.setAttribute("aria-hidden", String(!on));
+    });
+    dots.forEach(function (d, n) { d.setAttribute("aria-selected", String(n === index)); });
+  }
+
+  function start() {
+    if (reduce || paused || timer) return;
+    timer = setInterval(function () { go(index + 1); }, DELAY);
+  }
+  function stop() { clearInterval(timer); timer = null; }
+  function restart() { stop(); start(); }
+
+  prev.addEventListener("click", function () { go(index - 1); restart(); });
+  next.addEventListener("click", function () { go(index + 1); restart(); });
+
+  section.addEventListener("mouseenter", function () { paused = true; stop(); });
+  section.addEventListener("mouseleave", function () { paused = false; start(); });
+  section.addEventListener("focusin", function () { paused = true; stop(); });
+  section.addEventListener("focusout", function (e) {
+    if (!section.contains(e.relatedTarget)) { paused = false; start(); }
+  });
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) stop(); else start();
+  });
+
+  go(0);
+  start();
 })();

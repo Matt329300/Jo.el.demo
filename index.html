@@ -63,7 +63,7 @@
           <li><a href="#przy-kuchni">Przy kuchni</a></li>
         </ul>
         <ul class="nav-right">
-          <li><a href="#grupy">Grupy</a></li>
+          <li><a href="#opinie">Opinie</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -485,54 +485,51 @@
       </div>
     </section>
 
-    <!-- Wspólne tło dla sekcji „Większe grupy” i „Lokalizacja i informacje”: img/tlo-stol-noc.webp (patrz .photo-band w style.css) -->
+    <!-- Wspólne tło dla sekcji „Opinie” i „Lokalizacja i informacje”: img/tlo-stol-noc.webp (patrz .photo-band w style.css) -->
     <div class="photo-band">
-    <!-- ===== 4. WIĘKSZE GRUPY ===== -->
-    <section class="groups" id="grupy" aria-labelledby="groups-title">
-            <div class="container groups-inner">
-        <div class="groups-text">
-          <h2 id="groups-title">Większe grupy</h2>
-          <p>Planujecie kolację w większym gronie? Napiszcie, ile Was będzie i kiedy, a odezwiemy się z odpowiedzią.</p>
-          <!-- TODO: potwierdzić z lokalem, czy przyjmuje większe grupy i od ilu osób -->
-          <p class="note note--light">Czy przyjmujemy większe grupy: [DO POTWIERDZENIA]</p>
+    <!-- ===== 4. OPINIE ===== -->
+    <section class="reviews" id="opinie" aria-labelledby="reviews-title" aria-roledescription="karuzela">
+      <div class="container">
+        <div class="reviews-head">
+          <p class="reviews-kicker">Opinie</p>
+          <h2 id="reviews-title">Co mówią goście</h2>
         </div>
 
-        <!-- TODO: formularz – podłączyć wysyłkę (np. Formspree / własny backend) w script.js: FORM_ENDPOINT -->
-        <form class="group-form" id="group-form" novalidate>
-          <div class="field">
-            <label for="g-name">Imię i nazwisko</label>
-            <input id="g-name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="g-phone">Telefon</label>
-            <input id="g-phone" name="phone" type="tel" autocomplete="tel" required>
-          </div>
-          <div class="field">
-            <label for="g-email">E-mail</label>
-            <input id="g-email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field field--half">
-            <label for="g-date">Data</label>
-            <input id="g-date" name="date" type="date" required>
-          </div>
-          <div class="field field--half">
-            <label for="g-people">Liczba osób</label>
-            <input id="g-people" name="people" type="number" min="1" inputmode="numeric" required>
-          </div>
-          <div class="field field--full">
-            <label for="g-msg">Wiadomość (opcjonalnie)</label>
-            <textarea id="g-msg" name="message" rows="3"></textarea>
-          </div>
-          <div class="field field--full field--check">
-            <input id="g-consent" name="consent" type="checkbox" required>
-            <!-- TODO: link do polityki prywatności -->
-            <label for="g-consent">Zgadzam się na kontakt w sprawie zapytania. Polityka prywatności: [DO UZUPEŁNIENIA]</label>
-          </div>
-          <div class="field field--full">
-            <button class="btn btn--primary" type="submit">Wyślij zapytanie</button>
-          </div>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <!-- Slajdy opinii. Treści opinii NIE są wymyślone: wklej wybrane opinie gości
+             (np. z Google Maps), najlepiej za zgodą autora; podaj imię i źródło.
+             TODO: uzupełnić 3 opinie poniżej. -->
+        <div class="reviews-viewport">
+          <ul class="reviews-track" id="reviews-track" aria-live="off">
+            <li class="review is-active" role="group" aria-roledescription="slajd" aria-label="1 z 4">
+              <!-- Ocena widoczna w Google Maps (stan na 20.11.2026) – aktualizuj co jakiś czas -->
+              <p class="review-score"><span class="review-score-num">4,4</span> <span class="review-stars" aria-hidden="true">★★★★☆</span></p>
+              <p class="review-text">Średnia ocena w Google na podstawie 1223 opinii gości.</p>
+              <p class="review-author"><a href="https://www.google.com/maps/search/?api=1&amp;query=JOEL+Sharing+Concept+Koszykowa+1+Warszawa" rel="noopener" target="_blank">Zobacz opinie w Google</a></p>
+            </li>
+            <li class="review" role="group" aria-roledescription="slajd" aria-label="2 z 4">
+              <blockquote class="review-text">„[Treść opinii gościa – DO UZUPEŁNIENIA]”</blockquote>
+              <p class="review-author">[Imię] · Google</p>
+            </li>
+            <li class="review" role="group" aria-roledescription="slajd" aria-label="3 z 4">
+              <blockquote class="review-text">„[Treść opinii gościa – DO UZUPEŁNIENIA]”</blockquote>
+              <p class="review-author">[Imię] · Google</p>
+            </li>
+            <li class="review" role="group" aria-roledescription="slajd" aria-label="4 z 4">
+              <blockquote class="review-text">„[Treść opinii gościa – DO UZUPEŁNIENIA]”</blockquote>
+              <p class="review-author">[Imię] · Google</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reviews-controls">
+          <button class="reviews-btn" type="button" id="reviews-prev" aria-label="Poprzednia opinia">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <div class="reviews-dots" id="reviews-dots" role="tablist" aria-label="Wybierz opinię"></div>
+          <button class="reviews-btn" type="button" id="reviews-next" aria-label="Następna opinia">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -595,7 +592,7 @@
         <ul class="footer-links">
           <li><a href="#menu">Menu</a></li>
           <li><a href="#przy-kuchni">Przy kuchni</a></li>
-          <li><a href="#grupy">Większe grupy</a></li>
+          <li><a href="#opinie">Opinie</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
