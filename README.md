@@ -22,7 +22,7 @@ npx serve .
 Na stronie oznaczone jako `[DO UZUPEŁNIENIA]` / `[DO POTWIERDZENIA]`, w kodzie jako `TODO`:
 
 - godziny otwarcia,
-- treść 3 opinii gości w sekcji „Opinie” (wklejone z Google za zgodą autorów) i aktualna ocena Google,
+- aktualizacja oceny Google w sekcji „Opinie” (teraz 4,4 / 1223, stan na 20.11.2026),
 - znaczenie oznaczeń w menu (GF / L / LF / V) i menu dla dzieci,
 - domena (`canonical`, `og:url`, `og:image`) oraz dane w JSON-LD (godziny, menu, zdjęcie),
 - zgoda na użycie zdjęć i ewentualny podpis fotografa (@pionfotografia).

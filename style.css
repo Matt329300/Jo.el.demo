@@ -830,3 +830,8 @@ h3 { font-weight: 600; font-size: 1.3rem; }
 }
 
 .photo-band .reviews { background: none; }
+@media (max-width: 480px) {
+  .review-text { font-size: 1.2rem; line-height: 1.4; }
+  .reviews-stage { grid-template-columns: 36px minmax(0, 1fr) 36px; gap: 4px; }
+  .reviews-btn { width: 36px; }
+}
