@@ -835,3 +835,16 @@ h3 { font-weight: 600; font-size: 1.3rem; }
   .reviews-stage { grid-template-columns: 36px minmax(0, 1fr) 36px; gap: 4px; }
   .reviews-btn { width: 36px; }
 }
+
+/* Link do opinii Google pod karuzelą – odręcznie, jak „Opinie” */
+.reviews-more { margin: 28px 0 0; }
+.reviews-more a {
+  font-family: var(--font-script);
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  line-height: 1.1;
+  color: var(--saffron);
+  text-decoration: none;
+  text-shadow: 0 1px 10px rgba(0,0,0,.5);
+}
+.reviews-more a:hover,
+.reviews-more a:focus-visible { color: var(--tahini); }
