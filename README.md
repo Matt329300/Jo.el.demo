@@ -6,6 +6,7 @@ Statyczna strona restauracji JOEL Sharing Concept (kuchnia izraelsko-śródziemn
 - `style.css` – style (mobile-first)
 - `script.js` – menu mobilne, zakładki menu, karuzela opinii
 - `img/` – zdjęcia; źródła w [`img/ZRODLA.md`](img/ZRODLA.md)
+- [`WERYFIKACJA.md`](WERYFIKACJA.md) – źródło każdej informacji na stronie
 
 Bez frameworka i bez kroku budowania.
 
