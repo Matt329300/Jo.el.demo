@@ -498,6 +498,10 @@
         <!-- Slajdy opinii. Treści opinii NIE są wymyślone: wklej wybrane opinie gości
              (np. z Google Maps), najlepiej za zgodą autora; podaj imię i źródło.
              TODO: uzupełnić 3 opinie poniżej. -->
+        <div class="reviews-stage">
+          <button class="reviews-btn reviews-btn--prev" type="button" id="reviews-prev" aria-label="Poprzednia opinia">
+            <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          </button>
         <div class="reviews-viewport">
           <ul class="reviews-track" id="reviews-track" aria-live="off">
             <li class="review is-active" role="group" aria-roledescription="slajd" aria-label="1 z 4">
@@ -520,14 +524,8 @@
             </li>
           </ul>
         </div>
-
-        <div class="reviews-controls">
-          <button class="reviews-btn" type="button" id="reviews-prev" aria-label="Poprzednia opinia">
-            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-          </button>
-          <div class="reviews-dots" id="reviews-dots" role="tablist" aria-label="Wybierz opinię"></div>
-          <button class="reviews-btn" type="button" id="reviews-next" aria-label="Następna opinia">
-            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <button class="reviews-btn reviews-btn--next" type="button" id="reviews-next" aria-label="Następna opinia">
+            <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
           </button>
         </div>
       </div>

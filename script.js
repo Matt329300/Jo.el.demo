@@ -74,24 +74,12 @@
   var track = document.getElementById("reviews-track");
   if (!track) return;
   var slides = Array.prototype.slice.call(track.querySelectorAll(".review"));
-  var dotsBox = document.getElementById("reviews-dots");
   var prev = document.getElementById("reviews-prev");
   var next = document.getElementById("reviews-next");
   var section = track.closest(".reviews");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var DELAY = 6000;
   var index = 0, timer = null, paused = false;
-
-  var dots = slides.map(function (_, i) {
-    var d = document.createElement("button");
-    d.type = "button";
-    d.className = "reviews-dot";
-    d.setAttribute("role", "tab");
-    d.setAttribute("aria-label", "Opinia " + (i + 1));
-    d.addEventListener("click", function () { go(i); restart(); });
-    dotsBox.appendChild(d);
-    return d;
-  });
 
   function go(i) {
     index = (i + slides.length) % slides.length;
@@ -100,7 +88,6 @@
       s.classList.toggle("is-active", on);
       s.setAttribute("aria-hidden", String(!on));
     });
-    dots.forEach(function (d, n) { d.setAttribute("aria-selected", String(n === index)); });
   }
 
   function start() {
