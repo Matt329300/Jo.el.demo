@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JOEL Sharing Concept – kuchnia izraelsko-śródziemnomorska do dzielenia | Warszawa, Koszykowa 1</title>
+  <meta name="description" content="JOEL Sharing Concept: izraelsko-śródziemnomorskie talerze do dzielenia, kameralna sala i miejsca przy otwartej kuchni. Warszawa, ul. Koszykowa 1. Rezerwacje: 533 765 552.">
+  <meta name="theme-color" content="#161616">
+  <!-- TODO: wpisać docelowy adres strony (domena nieznana) -->
+  <!-- <link rel="canonical" href="https://[DOMENA]/"> -->
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="JOEL Sharing Concept">
+  <meta property="og:title" content="JOEL Sharing Concept – jedzenie na środek stołu">
+  <meta property="og:description" content="Izraelsko-śródziemnomorskie talerze do dzielenia, kameralna sala i miejsca przy otwartej kuchni. Warszawa, ul. Koszykowa 1.">
+  <!-- TODO: og:url i og:image wymagają pełnego adresu domeny + pliku img/og-image.jpg (1200×630) -->
+  <!-- <meta property="og:url" content="https://[DOMENA]/"> -->
+  <!-- <meta property="og:image" content="https://[DOMENA]/img/og-image.jpg"> -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "JOEL Sharing Concept",
+    "description": "Restauracja z kuchnią izraelsko-śródziemnomorską: talerze do dzielenia, kameralna sala, miejsca przy otwartej kuchni.",
+    "servesCuisine": ["Izraelska", "Śródziemnomorska"],
+    "telephone": "+48533765552",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Koszykowa 1",
+      "postalCode": "00-564",
+      "addressLocality": "Warszawa",
+      "addressCountry": "PL"
+    },
+    "acceptsReservations": true,
+    "sameAs": ["https://instagram.com/joelrestauracja"]
+  }
+  </script>
+  <!-- TODO JSON-LD: dodać "url", "image", "openingHoursSpecification", "hasMenu", "priceRange" po potwierdzeniu danych -->
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <!-- ===== NAGŁÓWEK ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu nawigacji</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Główna nawigacja">
+        <ul class="nav-left">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#przy-kuchni">Przy kuchni</a></li>
+        </ul>
+        <ul class="nav-right">
+          <li><a href="#grupy">Grupy</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <a class="logo" href="#top" aria-label="JOEL Sharing Concept – strona główna">JOEL</a>
+
+      <!-- TODO: jeśli lokal ma system rezerwacji online, podmienić href na jego link -->
+      <a class="header-cta" href="tel:+48533765552">Zarezerwuj</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <!-- Zdjęcie: poziomy kadr przekazany przez klienta, na bazie posta @joelrestauracja z 30.04.2023 (fot. @pionfotografia) – patrz img/ZRODLA.md.
+           TODO: potwierdzić, czy fotograf wymaga podpisu na stronie -->
+      <img class="hero-img" src="img/hero-lada.webp" alt="Wnętrze JOEL: marmurowa lada przy otwartej kuchni z rzędem skórzanych hokerów, świece na ścianie i ciepłe światło lamp" width="1672" height="941" fetchpriority="high">
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title">JOEL</h1>
+        <p class="hero-sub">Sharing Concept</p>
+        <p class="hero-tagline">jedzenie na środek stołu</p>
+        <a class="btn btn--primary" href="tel:+48533765552">Zarezerwuj</a>
+      </div>
+      <a class="hero-down" href="#o-nas" aria-label="Przewiń do opisu restauracji">
+        <svg width="28" height="16" viewBox="0 0 28 16" aria-hidden="true"><path d="M2 2l12 12L26 2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== KAFLE ZDJĘĆ (układ przesunięty) ===== -->
+    <section class="tiles" aria-label="Na skróty">
+      <div class="container tiles-grid">
+        <a class="tile tile--a" href="#menu">
+          <img class="photo photo--portrait" src="img/kafel-menu.jpg" alt="Stół przy świecach pełen talerzy do dzielenia, kieliszki z czerwonym winem i patera z owocami" width="1440" height="1920" loading="lazy">
+          <span class="tile-label">Menu</span>
+        </a>
+        <a class="tile tile--b" href="#przy-kuchni">
+          <img class="photo photo--tall" src="img/kafel-kuchnia.jpg" alt="Sala JOEL: drewniane ściany, mosiężne kinkiety, nakryte stoliki i wazon z gałązkami" width="1440" height="1800" loading="lazy">
+          <span class="tile-label">Przy kuchni</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== O NAS: tekst + pionowe zdjęcie ===== -->
+    <!-- Tło sekcji: img/tlo-stol-noc.webp, nieruchome przy przewijaniu (patrz .intro w style.css i img/ZRODLA.md) -->
+    <section class="intro" id="o-nas" aria-labelledby="intro-title">
+      <div class="container intro-grid">
+        <div class="intro-text">
+          <h2 id="intro-title">Kuchnia izraelsko-śródziemnomorska do dzielenia</h2>
+          <p>W JOEL wszystko trafia na środek stołu. Zamawiacie kilka talerzy, dzielicie się nimi i próbujecie wszystkiego po trochu.</p>
+          <p>Kameralna sala na Koszykowej 1, a dla ciekawych także miejsca przy otwartej kuchni.</p>
+          <a class="text-link" href="#menu">Zobacz menu</a>
+        </div>
+        <figure class="intro-photo">
+          <img class="photo photo--portrait" src="img/wnetrze-sala.jpg" alt="Wnętrze JOEL: marmurowa lada z hokerami, kwiaty i ciepłe światło lamp" width="1440" height="1920" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 2. MENU ===== -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="menu-head">
+          <p class="menu-kicker">Menu</p>
+          <h2 id="menu-title">Jesień–zima 2026/2027</h2>
+          <p class="menu-lead">Wszystko trafia na środek stołu. Zamawiajcie kilka talerzy i dzielcie się nimi.</p>
+        </div>
+
+        <aside class="howto" aria-labelledby="howto-title">
+          <h3 id="howto-title">Jak zamawiać?</h3>
+          <p>Talerze są do dzielenia, więc zamawiajcie na cały stół. Na przykład:</p>
+          <ul class="howto-list">
+            <li><strong>We dwoje</strong> <span>2 pasty · 2 małe talerze · 1 danie główne</span></li>
+          </ul>
+          <!-- TODO: opcjonalnie dodać propozycje dla 4 osób po konsultacji z lokalem -->
+        </aside>
+
+        <!-- Menu przepisane z karty "Menu jesień–zima 2026/2027" przekazanej przez klienta (2026-11-20).
+             Przy zmianie karty podmień pozycje poniżej. -->
+        <div class="menu-tabs" role="tablist" aria-label="Rodzaj menu">
+          <button class="menu-tab" type="button" role="tab" id="tab-jedzenie" aria-controls="panel-jedzenie" aria-selected="true">Jedzenie</button>
+          <button class="menu-tab" type="button" role="tab" id="tab-napoje" aria-controls="panel-napoje" aria-selected="false" tabindex="-1">Napoje</button>
+        </div>
+
+        <div class="menu-panel" id="panel-jedzenie" role="tabpanel" aria-labelledby="tab-jedzenie">
+          <section class="menu-cat" aria-labelledby="mc-dodatki">
+            <h3 class="menu-cat-title" id="mc-dodatki">Dodatki</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Jerusalem mix</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">20 zł</span></p>
+                <p class="mi-desc">kapusta, marchew, kalafior, ogórek, kurkuma, Ras el Hanout</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Oliwki</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">20 zł</span></p>
+                <p class="mi-desc">mix oliwek, oliwa, nasiona fenkułu, nasiona kolendry, płatki chilli, czosnek, pomarańcza, cytryna</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-mezze">
+            <h3 class="menu-cat-title" id="mc-mezze">Mezze</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Pieczony ziemniak <abbr class="mi-diet" title="bez glutenu">GF</abbr><abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">39 zł</span></p>
+                <p class="mi-desc">pieczony ziemniak, masło, crème fraîche, oliwa, jalapeño, Maldon</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Kalafior ½ <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">47 zł</span></p>
+                <p class="mi-desc">dwukrotnie pieczony kalafior, zapieczony tarty pomidor, czosnek, kumin, natka pietruszki, prażone migdały, labneh, za’atar, masło, oliwa</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">One minute steak</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">43 zł</span></p>
+                <p class="mi-desc">rumsztyk, chimichurri, za’atar, sumak, kolendra, mięta, natka, chilli, czosnek</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Labneh z pieczonymi pomidorkami <abbr class="mi-diet" title="bez glutenu">GF</abbr><abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">39 zł</span></p>
+                <p class="mi-desc">ser labneh naszej produkcji, pieczone pomidory, świeży tymianek, czosnek, oliwa, migdały</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Labneh z boczniakiem <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">39 zł</span></p>
+                <p class="mi-desc">ser labneh naszej produkcji, boczniak, masło, rzodkiewka, ogórek, cebulka, za’atar</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Jagnięcina</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">49 zł</span></p>
+                <p class="mi-desc">grillowana mielona jagnięcina, cebula, jalapeño, oliwa, izraelskie przyprawy, pita</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Hummus <abbr class="mi-diet" title="bez glutenu">GF</abbr><abbr class="mi-diet" title="wegańskie">V</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">30 zł</span></p>
+                <p class="mi-desc">cieciorka, tahini, czosnek, sumak, oliwa</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Carmel Market hummus <abbr class="mi-diet" title="bez glutenu">GF</abbr><abbr class="mi-diet" title="wegańskie">V</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">35 zł</span></p>
+                <p class="mi-desc">hummus na ciepło, sos tahinowy, cieciorka, cebula, jalapeño, sumak, oliwa, sok z cytryny, czosnek, Maldon</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Marchewki <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">39 zł</span></p>
+                <p class="mi-desc">marchewki, cieciorka, kuskus, feta, labneh, cynamon, miód, harissa, sambal, pietruszka, czosnek</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Brukselka <abbr class="mi-diet" title="bez glutenu">GF</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">36 zł</span></p>
+                <p class="mi-desc">karmelizowana brukselka, mango, miód, miso, masło, harrisa, musztarda Dijon, ocet, ananasowy rum, kozieradka, kurkuma, kumin, czosnek, kolendra, sezam, sumak, Maldon</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Bakłażan <abbr class="mi-diet" title="bez glutenu">GF</abbr><abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">38 zł</span></p>
+                <p class="mi-desc">bakłażan, crème fraîche, tahini, pomidory, mięta, kolendra, czosnek, cebula, orzechy ziemne, czarnuszka, chilli, szalotka</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Burak <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">33 zł</span></p>
+                <p class="mi-desc">burak, ser owczy, za’atar, orzechy nerkowca, kolendra, mięta, tahini, miód</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Sałata rzymska <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">sałata rzymska, natka pietruszki, kolendra, estragon, kozi ser, panko, nori, masło, oliwa</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Śledź podwędzany <abbr class="mi-diet" title="bez glutenu">GF</abbr><abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">39 zł</span></p>
+                <p class="mi-desc">holenderski wędzony matias, olej lniany, szalotka, crème fraîche, jajko, cebula, szczypior</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Tatar <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">57 zł</span></p>
+                <p class="mi-desc">polędwica wołowa, musztarda, szalotka, ogórek, żółtko, szpik wołowy, oliwa, sos sojowy, bulion wołowy, grzanka, cebula, tymianek, masło, daktyle</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Borek <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">54 zł</span></p>
+                <p class="mi-desc">wołowina, miso, filo, muhammara, kolendra, pietruszka, Ras el Hanout, kumin, masło, orzechy włoskie, czosnek, jalapeño, szalotka, granat</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Krokiety <abbr class="mi-diet" title="bez laktozy">LF</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">46 zł</span></p>
+                <p class="mi-desc">dorsz, krewetki, panko, dżem marchewkowy, jajko, pepperoni, szalotka, imbir, czosnek, kolendra, shiso, mięta, rzodkiewka, wasabi</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Ośmiornica <abbr class="mi-diet" title="bez glutenu">GF</abbr><abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">93 zł</span></p>
+                <p class="mi-desc">ośmiornica, ziemniak francuski, papryka, pomidor, kiszone cytryny, czosnek, imbir, masło, oliwa, kumin, natka pietruszki</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-ostrygi">
+            <h3 class="menu-cat-title" id="mc-ostrygi">Ostrygi</h3>
+            <p class="menu-cat-note">Serwowane od piątku do niedzieli, do wyczerpania zapasów.</p>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Mignonette</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">22 zł</span></p>
+                <p class="mi-desc">ostryga irlandzka, szalotka, ocet winny, pieprz</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Róża</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">22 zł</span></p>
+                <p class="mi-desc">ostryga irlandzka, ocet malinowy, róża, szalotka, granat</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Brzoskwinia</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">22 zł</span></p>
+                <p class="mi-desc">ostryga irlandzka, brzoskwinia, smażony czosnek, jalapeño</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Ostryga pieczona</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">27 zł</span></p>
+                <p class="mi-desc">ostryga irlandzka, czerwone wino, chimichurri, parmezan</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-sosy">
+            <h3 class="menu-cat-title" id="mc-sosy">Sosy</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Shuq</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">8 zł</span></p>
+                <p class="mi-desc">jalapeño, kolendra, czosnek, hawaij, sok z cytryny</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Czerwony shuq</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">8 zł</span></p>
+                <p class="mi-desc">chilli, czerwona papryka, kolendra, czosnek, hawaij</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Cytrynowe aioli</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">8 zł</span></p>
+                <p class="mi-desc">kiszone cytryny, mięta, czosnek</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-pieczywo">
+            <h3 class="menu-cat-title" id="mc-pieczywo">Pieczywo</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Pita</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">9 zł</span></p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Pita z palonym masłem</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">13 zł</span></p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-desery">
+            <h3 class="menu-cat-title" id="mc-desery">Desery</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Miodownik <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">27 zł</span></p>
+                <p class="mi-desc">czekolada, mascarpone, śmietanka, rozmaryn, miód gryczany, masło, jajka, mąka</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Jabłuszko <abbr class="mi-diet" title="zawiera laktozę">L</abbr></span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">27 zł</span></p>
+                <p class="mi-desc">jabłka, kataifi, masło, cynamon, kardamon, kurkuma, ricotta, śmietanka</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="menu-panel" id="panel-napoje" role="tabpanel" aria-labelledby="tab-napoje" data-hidden>
+          <section class="menu-cat" aria-labelledby="mc-koktajle-wlasne">
+            <h3 class="menu-cat-title" id="mc-koktajle-wlasne">Koktajle własne</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Rozkwit</span> <span class="mi-style">gorzki, klasyczny</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">gin 0%, wermut 0%, bitter 0%</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Natchnienie</span> <span class="mi-style">lekki, orzeźwiający</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">bitter 0%, prosecco 0%, woda gazowana</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Pasja</span> <span class="mi-style">wytrawny, intensywny</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">gin 0%, syrop tonik, kiszone cytryny, oliwa miętowa</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Czułość</span> <span class="mi-style">energetyzujący, ziołowy</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">cold brew, rozmaryn, miód pomarańczowy, śmietanka, wanilia</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Zachwyt</span> <span class="mi-style">owocowy, słodki</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">bitter 0%, wermut 0%, śliwka, granat, cytryna, białko</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Olśnienie</span> <span class="mi-style">pikantny, ciężki</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">sok pomidorowy, limonka, sok z pikli, tabasco, Worcestershire, tajin</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Euforia</span> <span class="mi-style">dymny, pobudzający</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">34 zł</span></p>
+                <p class="mi-desc">mezcal 0%, piwo imbirowe, miód limonkowy, limonka</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-kombucha">
+            <h3 class="menu-cat-title" id="mc-kombucha">Kombucha</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Mikrozuza</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">15 / 90 zł</span></p>
+                <p class="mi-desc">125 ml / 750 ml</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-napoje-wlasne">
+            <h3 class="menu-cat-title" id="mc-napoje-wlasne">Napoje własne</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Tamara</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">21 zł</span></p>
+                <p class="mi-desc">330 ml, grejpfrut, tymianek, sumak, woda niegazowana</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Estera</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">21 zł</span></p>
+                <p class="mi-desc">330 ml, marakuja, ananas, trawa cytrynowa, goździk, woda niegazowana</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Yerba mate</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">21 zł</span></p>
+                <p class="mi-desc">330 ml, skórki z pomarańczy, miód lipowy, woda gazowana</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-niewina">
+            <h3 class="menu-cat-title" id="mc-niewina">Niewina</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">F’alko Sparkling Chardonnay</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">15 / 90 zł</span></p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Weingut Schales Sauvignon Blanc</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">27 / 162 zł</span></p>
+                <p class="mi-desc">Niemcy (&lt;0,5%)</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Weingut Diefenhardt Riesling Alkoholfrei</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">35 / 210 zł</span></p>
+                <p class="mi-desc">Niemcy</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Moderato Cuvée Révolutionnaire Rouge Merlot-Tannat</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">35 / 210 zł</span></p>
+                <p class="mi-desc">Francja</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-piwo">
+            <h3 class="menu-cat-title" id="mc-piwo">Piwo</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Bavaria 0%</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">22 zł</span></p>
+                <p class="mi-desc">330 ml, piwo pszeniczne / lager 0%</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Corona 0%</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">22 zł</span></p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-napoje-zimne">
+            <h3 class="menu-cat-title" id="mc-napoje-zimne">Napoje zimne</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Woda gazowana / niegazowana</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">17 zł</span></p>
+                <p class="mi-desc">700 ml</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Coca-Cola / Coca-Cola Zero</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">10 zł</span></p>
+                <p class="mi-desc">330 ml</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-herbata">
+            <h3 class="menu-cat-title" id="mc-herbata">Herbata</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Mango Tango</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">19 zł</span></p>
+                <p class="mi-desc">mango, szafran, pomarańcza</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">English Breakfast</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">19 zł</span></p>
+                <p class="mi-desc">klasyczna czarna</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Herbata jaśminowa</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">19 zł</span></p>
+                <p class="mi-desc">zielona herbata, kwiaty jaśminu</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Earl Grey</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">19 zł</span></p>
+                <p class="mi-desc">bergamotka, nagietek</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Sencha</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">19 zł</span></p>
+                <p class="mi-desc">cytryna</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Hibiskus</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">19 zł</span></p>
+                <p class="mi-desc">hibiscus, czerwony pieprz, pomarańcza</p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Napar imbirowy</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">19 zł</span></p>
+                <p class="mi-desc">imbir, cytryna, miód</p>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-cat" aria-labelledby="mc-kawa">
+            <h3 class="menu-cat-title" id="mc-kawa">Kawa</h3>
+            <ul class="menu-items">
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Espresso</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">10 zł</span></p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Americano</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">12 zł</span></p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Cappuccino</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">14 zł</span></p>
+              </li>
+              <li class="mi">
+                <p class="mi-row"><span class="mi-name">Flat white</span><span class="mi-dots" aria-hidden="true"></span><span class="mi-price">18 zł</span></p>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="menu-legend">
+          <!-- TODO: potwierdzić z lokalem znaczenie oznaczeń (L = zawiera laktozę, LF = bez laktozy?) -->
+          <p><abbr class="mi-diet" title="bez glutenu">GF</abbr> bez glutenu · <abbr class="mi-diet" title="wegańskie">V</abbr> wegańskie · <abbr class="mi-diet" title="zawiera laktozę">L</abbr> zawiera laktozę · <abbr class="mi-diet" title="bez laktozy">LF</abbr> bez laktozy <span class="note">[DO POTWIERDZENIA]</span></p>
+          <p>Menu dla dzieci: [DO UZUPEŁNIENIA]</p>
+          <p>Wszystko z menu zamówicie też na wynos: <a href="tel:+48533765552">533 765 552</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. MIEJSCA PRZY KUCHNI ===== -->
+    <section class="counter" id="przy-kuchni" aria-labelledby="counter-title">
+      <div class="container counter-grid">
+        <figure class="counter-photo">
+          <img class="photo photo--portrait" src="img/kuchnia-lada.jpg" alt="Marmurowa lada przy kuchni w złotym świetle: nakrycia, szklanki i rząd hokerów" width="1440" height="1920" loading="lazy">
+        </figure>
+        <div class="counter-text">
+          <h2 id="counter-title">Miejsca przy kuchni</h2>
+          <p>Usiądźcie przy otwartej kuchni i patrzcie, jak powstają Wasze talerze: od pierwszej pasty po danie główne. Dobre miejsce na kolację we dwoje albo w pojedynkę.</p>
+          <p class="note">Liczba miejsc przy kuchni: [DO UZUPEŁNIENIA]</p>
+          <a class="btn btn--primary" href="tel:+48533765552">Zarezerwuj miejsce przy kuchni</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wspólne tło dla sekcji „Większe grupy” i „Lokalizacja i informacje”: img/tlo-stol-noc.webp (patrz .photo-band w style.css) -->
+    <div class="photo-band">
+    <!-- ===== 4. WIĘKSZE GRUPY ===== -->
+    <section class="groups" id="grupy" aria-labelledby="groups-title">
+            <div class="container groups-inner">
+        <div class="groups-text">
+          <h2 id="groups-title">Większe grupy</h2>
+          <p>Planujecie kolację w większym gronie? Napiszcie, ile Was będzie i kiedy, a odezwiemy się z odpowiedzią.</p>
+          <!-- TODO: potwierdzić z lokalem, czy przyjmuje większe grupy i od ilu osób -->
+          <p class="note note--light">Czy przyjmujemy większe grupy: [DO POTWIERDZENIA]</p>
+        </div>
+
+        <!-- TODO: formularz – podłączyć wysyłkę (np. Formspree / własny backend) w script.js: FORM_ENDPOINT -->
+        <form class="group-form" id="group-form" novalidate>
+          <div class="field">
+            <label for="g-name">Imię i nazwisko</label>
+            <input id="g-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="g-phone">Telefon</label>
+            <input id="g-phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="g-email">E-mail</label>
+            <input id="g-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field field--half">
+            <label for="g-date">Data</label>
+            <input id="g-date" name="date" type="date" required>
+          </div>
+          <div class="field field--half">
+            <label for="g-people">Liczba osób</label>
+            <input id="g-people" name="people" type="number" min="1" inputmode="numeric" required>
+          </div>
+          <div class="field field--full">
+            <label for="g-msg">Wiadomość (opcjonalnie)</label>
+            <textarea id="g-msg" name="message" rows="3"></textarea>
+          </div>
+          <div class="field field--full field--check">
+            <input id="g-consent" name="consent" type="checkbox" required>
+            <!-- TODO: link do polityki prywatności -->
+            <label for="g-consent">Zgadzam się na kontakt w sprawie zapytania. Polityka prywatności: [DO UZUPEŁNIENIA]</label>
+          </div>
+          <div class="field field--full">
+            <button class="btn btn--primary" type="submit">Wyślij zapytanie</button>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== 5. KONTAKT / LOKALIZACJA ===== -->
+    <section class="info" id="kontakt" aria-labelledby="info-title">
+      <div class="container">
+        <h2 id="info-title">Lokalizacja i informacje</h2>
+        <div class="info-grid">
+          <div class="info-details">
+            <div class="info-item">
+              <h3>Godziny otwarcia</h3>
+              <!-- TODO: godziny otwarcia -->
+              <p>[DO UZUPEŁNIENIA]</p>
+            </div>
+            <div class="info-item">
+              <h3>Adres</h3>
+              <p>ul. Koszykowa 1<br>00-564 Warszawa</p>
+            </div>
+            <div class="info-item">
+              <h3>Rezerwacje i na wynos</h3>
+              <p><a href="tel:+48533765552">533 765 552</a></p>
+            </div>
+            <div class="info-item">
+              <h3>Instagram</h3>
+              <p><a href="https://instagram.com/joelrestauracja" rel="noopener" target="_blank">@joelrestauracja</a></p>
+            </div>
+            <div class="info-item info-item--wide">
+              <h3>Dobrze wiedzieć</h3>
+              <ul class="facts">
+                <li>Rezerwacje</li>
+                <li>Jedzenie na wynos</li>
+                <li>Menu dla dzieci</li>
+                <li>Parking płatny na ulicy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-map">
+            <iframe
+              title="Mapa Google: JOEL Sharing Concept, ul. Koszykowa 1, Warszawa"
+              src="https://www.google.com/maps?q=JOEL+Sharing+Concept,+Koszykowa+1,+00-564+Warszawa&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <!-- ===== STOPKA ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2 class="footer-title">JOEL</h2>
+        <p>Sharing Concept<br>kuchnia izraelsko-śródziemnomorska do dzielenia</p>
+      </div>
+      <div>
+        <h2 class="footer-head">Na stronie</h2>
+        <ul class="footer-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#przy-kuchni">Przy kuchni</a></li>
+          <li><a href="#grupy">Większe grupy</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-head">Kontakt</h2>
+        <ul class="footer-links">
+          <li><a href="tel:+48533765552">533 765 552</a></li>
+          <li>ul. Koszykowa 1, 00-564 Warszawa</li>
+          <li><a href="https://instagram.com/joelrestauracja" rel="noopener" target="_blank">Instagram @joelrestauracja</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom container">© <span id="year">2026</span> JOEL Sharing Concept</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
